@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>네이버 요약 뉴스</title>
+        <style>
+            /* 스타일시트를 사용하는 영역 */
+            /* CSS문법만 사용 가능 */
+            /* 
+                기본 사용법: 
+
+                선택자{
+                    속성명:값;
+                }
+                
+                - 선택자 : 태그명, 아이디명, 클래스명 등
+                - 속성명 : 각 요소를 구성하는 상세속성들
+                - 값 : 각 속성에서 사용할 수 있는 값들
+
+                속성명 다음에 콜론(:)
+                값 다음에 세미콜론(;)
+
+                [ CSS 선택자(Selector) ]
+                1. 타입 선택자 : 요소명
+                   ex) h1/a/p/div
+                2. 자손 선택자 : 띄어쓰기
+                   ex)h1, a
+                3. 아이디 선택자 : #아이디명
+                4. 클래스 선택자 : .클래스명
+                5. 직계 자식 선택자 : >
+                   ex) div>a
+                   (div > a로도 사용 가능)
+                6. 그룹 선택자 : , 
+                   ex) p,div
+                7. 종속선택자 : 태그명 + 아이디 / 클래스명
+                   ex) div#top / a.my
+                8. 형제 선택자 : +
+                   ex) a+a
+                   -> 해석 : 앞에 지정요소가 있는 형제요소 선택
+                9. 다중 형제 선택자 : ~(틸드)
+                   ex) li:nth-child(2)~li
+                   -> 해석 : 선택된 형제요소 뒤의 모든 형
+                10. 속성선택자: []
+                    ex) a[href=#]
+                    -> 특정속성을 가진 요소를 선택
+
+                [ CSS 요소 박스모델 필수 속성 ]
+                1. width : 가로 크기
+                   -> 기본값 auto
+                      블록박스는 끝까지 차지
+                      인라인박스는 내용만큼 늘어남
+                2. height : 세로 크기
+                   -> 기본값 auto
+                      내용만큼 늘어남
+                3. padding : 안쪽 여백
+                4. border : 경계선
+                5. margin : 바깥여백
+            */
+            /* 상단영역 */
+            header{
+                width: 750px;
+                height: 150px;
+                border: 10px dotted red;
+                /* 보더: 두께 종류 색상 */
+                padding: 20px;
+                margin: 50px auto;
+                /* 마진: 위 아래 양쪽
+                양쪽을 auto로 주면 블록박스가 중앙에 온다.
+                margin: 0 auto로 주는 경우가 많아서 속칭 마영오라고도 불림. */
+            }
+            /* 메인영역 이미지 */
+            
+            /* 박스 공통 */
+            .part{
+                width: 750px;
+                height: 150px;
+                border: 10px dotted red;
+                /* 보더: 두께 종류 색상 */
+                padding: 20px;
+                margin: 50px auto;
+                /* 마진: 위 아래 양쪽
+                양쪽을 auto로 주면 블록박스가 중앙에 온다.
+                margin: 0 auto로 주는 경우가 많아서 속칭 마영오라고도 불림. */
+            }
+            </style>
+    </head>
+    <body>
+        <!-- 1. 상단영역 -->
+        <header class="part top">
+            <!-- 1-1.타이틀 -->
+            <h1>네이버 요약뉴스</h1>
+            <!-- 1-2.GNB(Global Navigation Bar) 메뉴 -->
+            <div id="gnb">
+                <a href="#">
+                    <img src="images/naverlogo.png" alt="네이버 로고" style="width: 20px;">
+
+                </a>
+                <a href="#">정치</a>
+                <a href="#">경제</a>
+                <a href="#">사회</a>
+                <a href="#">IT/과학</a>
+                <a href="#">TV/연예</a>
+
+            </div>
+        </header>
+        <!-- 2. 메인영역 -->
+        <main class="part main">
+            <!-- 메인 이미지 -->
+            <img src="images/newsillust.jpg" alt="메인뉴스 일러스트 이미지">
+        </main>
+        <!-- 3. 하단영역 -->
+        <footer class="part">
+            <!-- 회사주소 및 정보 -->
+            <address>
+                서울시 강남구 역삼동 119 대호빌딩 8F<br>
+                대표: 김태현<br>
+                전화번호: 010-2222-3333
+            </address>
+        </footer>
+        
+        <!-- 
+            [ div요소 : divide / division ]
+            -> 영역을 구분하는 블록요소
+            -> 특징 : 내용을 구분하는 역할을 하며 블록요소 옆에 다른 요소가 위치하지 못한다.
+            
+            [ div 형제 요소들 ]
+            -> div에 어떤 내용영역인지 알 수 있도록 의미를 부여한 새로운 레이아웃용 태그들
+            -> 태그의 의미를 부여함
+            -> 시멘틱태그(sementic tag)
+            1. header : 상단영역
+               각 파트 별 상단 표시 가능
+            2. footer : 하단영역
+               각 파트별 하단 표시 가능
+            3. main : 메인영역
+               한 페이지 당 한 번만 표시 가능
+            4. nav : 네비게이션 영역
+            5. aside : 부수적인 내용 영역
+            6. section : 내용구분을 위한 영역
+            7. article : 독립적인 내용을 구분하는 영역
+            
+            (보통 article이나 section은 w3c에서 heading(h1~h6) 태그를 내용에 사용할 것을 권고하나 쓰지 않아도 무방하다.)
+
+            [ img요소 : image ]
+            - 이미지를 넣어주는 요소
+            - 필수 속성:
+            1. src속성 - 이미지경로
+                (src -> source)
+            2. alt속성 - 이미지설명
+                (alt -> alternative text)
+                대체 텍스트 -> 웹 접근성 필수
+
+            [ 경로에 관하여 ]
+            1. 상대경로
+            -> 현재파일 위치를 기준으로 경로 설정
+            ex) ./ or 아무것도 입력 안함 -> 현재 위치
+                ../ 한 단계 위의 경로로 이동
+                ../../../../ -> 상위 경로로 계속 이동
+            2. 절대경로
+            -> 웹주소를 절대경로라고 칭한다.
+            ex) http:// or https://
+            (http -> Hyper Text Transfer Protocol)
+            3. 절대상대경로
+            프로젝트 파일 최상위부터 설정하는 경로
+            / 루트부터 출발
+            ex) /aaa/bbb
+            -> 서버에 업로드 했을 때 개발환경과 root가 달라질 수 있으므로 
+               절대상대경로는 사용시에 주의를 요한다.
+
+            [ 웹 접근성이란? ]
+            - 누구나 웹 정보에 접근할 수 있어야 하며, 불평등이 있어서는 안되는 웹 평등의 원칙
+               ex) alternative text를 넣으면 screen reader가 읽어준다
+               -> 참고) 웹 접근성 연구소(https://https://www.wah.or.kr:444/)
+
+            [ 웹 표준이란? ]
+            - 모든 브라우저에서 공통으로 작성되는 코딩 규칙 및 표준
+            (크로스 브라우징은 같은 디자인과 같은 기능을 여러 종류의 브라우저에서 동일하게 작동되는 것을 말한다.)
+
+            [ CSS 넣기 속성 ]
+            - style = "CSS 속성 설정"
+            - 속성설정 방법
+                속성명:값;
+            ->이런 방법을 인라인 CSS라고 한다.
+         -->
+    </body>
+</html>
