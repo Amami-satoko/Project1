@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- HTML5 문서로 읽어라 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- 메타태그 정보 중 charset 속성을
+        UTF-8로 설정하면 2byte 문자도 잘 나온다 -->
+        <title>자바 기반 풀스택 개발자 과정 - 기본전달사항</title>
+    </head>
+    <body>
+        <!-- 
+            [태그 기본 구성]
+            <태그명 속성명="값">데이터</태그명>
+            -w3c에서 태그명은 소문자, 속성값은 쌍따옴표로 쓸 것을 권고했으나,
+             필수로 지키지 않아도 됨
+            -홀로 존재하는 태그도 있음. 홀로태그라고 칭함.
+             ex) <br>, <meta>
+
+            [html문서 기본태그]
+            - <!DOCTYPE html> 문서선언부(html의 버전을 규정함)
+            - <html>, <head>, <body> -> 가장 큰 기본구성 요소이다.
+            [h1~h6 헤딩요소(heading element)]
+            - 크기별, 순서별 머릿글 표시
+            - 옆에 아무도 오지 못하는 블록요소임 
+        
+            [a요소(a element)]
+            - 다른 페이지로 이동하기 위한 요소
+            - 속성(attribute)
+            1) href(Hyper Text Reference) : 이동 주소 참조 속성
+            ->값으로 "#이름"이라고 입력하면 
+              같은 페이지 안의 아이디요소의 위치로 이동함
+            2) target : 열릴 창의 옵션 속성
+            -> 기본값 _self : 자신창
+            -> _blank : 새 탭 열기 
+        
+            [br요소 (break element)]
+            -인라인의 줄바꿈 요소
+            -닫는 태그가 없는 홀로태그
+
+            [참고: 요소와 태그의 차이]
+            -요소(element)는 공통적인 규칙이나 속성을 가진
+            html 구조화 부분을 말한다.
+            -태그(tag)는 요소를 구체적으로 페이지에 적용할 때
+            하나하나의 요소를 지칭하며 사용함
+        -->
+        <h1>[ 자바 기반 풀스택 개발자 과정 - 기본전달사항 ]<br></h1>
+        탐쌤이멜: tombap@naver.com<br>
+
+        <a href="https://drive.google.com/drive/folders/1P-suVVa6anWBdieLX4QzaZe1rkEsivz6?usp=sharing" target="_blank">데일리 미션 구글드라이브</a>
+        
+        <h2>1. 교재</h2>
+        NCS 5권<br>
+        
+        <h2>2. 시험 </h2>
+        과목별 평가(각 과목이 끝나는날)<br>
+        
+        <h2 id="book">3. 공식교과서 </h2>
+        <a href="https://www.w3schools.com/" target="_blank">w3c 스쿨</a><br>
+        
+        <h2>4. 소스 빌드용 폴더 생성하기!</h2>
+        
+        <h3>
+            <h2>5. <a href="https://www.youtube.com/channel/UCdHkJVwwhMzlza-iRYIgc5A" target="_blank">강의 동영상 백업 유튜브: <br> 자바 기반 풀스택 개발자 과정</a></h2>
+        </h3>
+        
+        <h2>6. 소스 깃허브</h2>
+        <a href="https://github.com/tombap8/GITA-FSD-JD22" target="_blank">GITA-FSD-JD22</a><br>
+        
+        <h2>7. 사이트 벤치마킹 포털</h2>
+        
+        <h3>(1) <a href="https://www.dbcut.com/bbs/index.php" target="_blank">디비컷</a><br></h3>
+        
+        <h3>(2) <a href="https://www.gdweb.co.kr/main/" target="_blank">굿디자인웹</a><br></h3>
+        
+        <h3>(3) <a href="https://www.awwwards.com/" target="_blank">어워즈</a><br><br></h3>
+        
+        <h2>8. 필수 회원가입</h2>
+        
+        <h3>(1) <a href="https://www.dothome.co.kr/" target="_blank">닷홈: 회원가입 후 무료호스팅하기!</a><br></h3>
+        
+        <h3>(2) <a href="https://github.com/" target="_blank">깃허브: 회원가입 후 레파지토리 만들기!</a><br><br></h3>
+        
+        <h2>9. 포트폴리오</h2>
+        - 개인포폴 주제선정 후 코딩하여 수료날 발표하기!<br>
+        <a href="https://tombap8.github.io/KNG-FED211/index.html" target="_blank">예시)</a><br><br>
+        
+        <h2>10. UI/UX 참고자료</h2>
+        
+        <h3>1) UX 개념의 예 :  피아노건반 계단</h3>
+        - <a href="https://youtu.be/SByymar3bds" target="_blank">The Fun Theory 동영상 시리즈 1번째</a><br>
+        
+        <h3>2) 인터페이스 개념</h3>
+        <a href="https://youtu.be/EKFM5yeXdck" target="_blank">- 나건교수 동영상</a><br><br>
+        
+        -> 소통이 이루지는 장소에서 사용되는 
+        수단과 방법을 인터페이스라고 한다.
+        <h2>
+            <a href="#">맨 위로 이동</a>
+            <a href="#book">공식 교과서</a>
+        </h2>
+        <!--
+            href값에 '#'만 입력하면 페이지의 최상단으로 이동한다.
+            "#아이디명"을 입력하면 아이디요소의 위치로 이동함
+
+            각 요소는 각각 이름을 줄 수 있다
+            -id 속성 : id="아이디명" -> 한 페이지 안에 하나만 위치
+            -class 속성: class="클래스명" -> 한 페이지 안에 다중사용 가능
+        -->
+    </body>
+</html>
