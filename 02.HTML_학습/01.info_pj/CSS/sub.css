@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* info PJ 서브페이지 CSS - sub.css */
+
+/* 공통 클래스 불러오기 */
+
+/* 
+    import로 파일 합치기
+    외부 CSS파일에서 다른 외부 CSS파일을 
+    import 방식으로 불러올 때
+    장점: html에서 link요소로 호출할 경우
+    http request(웹 요청)이 많아져서
+    페이지 렌더링 속도가 더뎌진다
+    -> 한번에 여러 외부 CSS를 불러올 수 있어 속도에 유리하다.
+*/
+/* @import url(파일주소); */
+@import url(common.css);
+.main{
+    /* 패딩 15px */
+    padding: 15px;
+}
+
+/* 2-1. 언론사로고 */
+.prlogo img{
+    height: 32px;
+}
+/* 2-2. 기사제목 */
+.atit{
+    /* 글자 크기 fz 30px */
+    font-size: 30px;
+    /* 글자 두께 보통 fw n */
+    font-weight: normal;
+    /* 글자체 ff */
+    font-family: "굴림", "궁서", sans-serif;
+    /* 자간 ls -2 */
+    letter-spacing: -2px;
+    /* 단어 간격 ws -1 */
+    word-spacing: -1px;
+    /* 줄바꿈방지 whs */
+    /* white-space: nowrap; */
+    /* 언제 사용하는가
+       조금의 차이로 줄바꿈 될 때 줄바꿈을 하지 않게 하기 위해 */
+
+}
+/* 2-3. 기사사진(+사진 설명) */
+.afig{
+    /* 마진 m */
+    margin: 15px 0;
+    /* width: 100%; */
+    /* 컨텐츠 중앙정렬 tac */
+    text-align: center;
+}
+/* 기사 이미지 */
+.afig img{
+    /* 최대 가로크기 maw100p */
+    max-width: 100%;
+    /* 이미지에 이 설정을 하면
+       박스가 이미지보다 작아질 때 
+       이미지가 박스 크기에 맞게 작아진다. */
+    /* 가로크기 w100p */
+}
+/* 2-4. 기사내용 */
+/* 2-5. 기자 정보 */
+/* 2-6. 기사 원문 */
