@@ -151,7 +151,7 @@
 
         <!-- 주해 표시 박스 -->
         <article class="desc">
-            <h3>▣</h3>
+            <h3>▣ 주해</h3>
             <small>
                 ① 다누리 <br>
                 다누리는 한국항공우주연구원이 개발하여 2022년 8월 5일에 발사된 대한민국 최초의 달 궤도 탐사선이다. <br>달 궤도를 돌며 달을 탐사하는 것을 목표로 한다. <br>성공한다면 대한민국은 세계 7번째 달 탐사국 반열에 오른다. <br><br>
@@ -161,6 +161,13 @@
 
             </small>
         </article>
+        <!-- 2-5. 기자 정보 -->
+        <div class="rinfo">정두용(jdy2230@bloter.net)</div>
+
+        <!-- 2-6. 기사 원문 -->
+        <h5 class="org">
+            <a href="https://n.news.naver.com/mnews/article/293/0000040540?sid=105" target="_blank">기사 원문</a>
+        </h5>
 
         <!-- 오늘의 작품 & 느낌 -->
         <article class="work">
@@ -220,13 +227,7 @@
                 </li>
             </ol>
          </article>
-        <!-- 2-5. 기자 정보 -->
-        <div class="rinfo">정두용(jdy2230@bloter.net)</div>
-
-        <!-- 2-6. 기사 원문 -->
-        <h5 class="org">
-            <a href="https://n.news.naver.com/mnews/article/293/0000040540?sid=105" target="_blank">기사 원문</a>
-        </h5>
+        
 
 
     <!-- 분야별 뉴스(용어정의리스트 dl) -->
@@ -257,6 +258,55 @@
                 <a href="https://entertain.naver.com/read?oid=109&aid=0004694428" target="_blank">“17년 기다린 팬 위해” 강타, 아이돌 시조새의 한계 없는 진화 [종합]</a>
             </dd>
         </dl>
+    </article>
+    
+    <!-- 사진 뉴스 (table) -->
+    <article class="pnews">
+        <h3>사진뉴스</h3>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040589" target="_blank">
+                        'M자' 벗고 위성통신 탑재, <br>
+                        新 프로까지 확 달라진 아이폰14
+                    </a>
+                </td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040589" target="_blank">
+                        <img src="./images/pn1.jpg" alt="사진뉴스1">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040594" target="_blank">
+                        소니, 블리자드 인수 후 ‘콜 오브 듀티’ <br>
+                        제공한다는 MS에 불만 표출
+                    </a>
+                </td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040594" target="_blank">
+                        <img src="./images/pn2.png" alt="사진뉴스2">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040593" target="_blank">
+                        그날의 여성, 익스트림 스포츠 겨냥한 <br>
+                        '애플워치8·울트라' 공개
+                    </a>
+                </td>
+                <td>
+                    <a href="https://n.news.naver.com/mnews/article/293/0000040593" target="_blank">
+                        <img src="./images/pn3.png" alt="사진뉴스3">
+                    </a>
+                </td>
+            </tr>
+        </table>
     </article>
 </main>
 
@@ -332,7 +382,7 @@
                 -> right to left, 즉 오른쪽에서 왼쪽으로.
 
             _________________________________________________________________
-            [ 그룹요소 ]
+        [ 그룹요소 ]
             1. ul - 순서없는 리스트
                 ul > li
                 -> 앞에 블릿은 CSS로 변경 가능
@@ -359,6 +409,26 @@
                     (description each term)
 
                 주의사항 - dl은 반드시 자식요소로 dt, dd를 한 번 이상 사용해야 함.
+
+            4. table 테이블
+                table tr td
+                table > tbody > tr> td
+
+               table : 테이블 박스 부모요소
+                tr : 테이블 행요소 (table row)
+                td : 테이블 데이터 (table data)
+                참고) table, tr, td 로만 코드를 구성한 경우
+                      브라우저 분석기로 보면 table > tbody가 있다.
+                      이는 테이블 본문 파트를 나타낸다.
+                      써주지 않아도 기본 코딩으로 자동추가된다.
+                      (원래 테이블은 thead, tbody, tfoot 세 부분으로 구성된다.)
+
+      _________________________________________________________________________________
+            [p 요소 : paragraph]
+            - 문단을 나눌 때 사용하는 요소
+            - 주의 : p요소 내부에 다른 블록요소 사용 불가
+                    제목요소인 h1~h6를 외부에 쓸 수 없음
+            
         -->
 </body>
 
