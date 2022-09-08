@@ -299,6 +299,11 @@
     padding-left: 20px;
     font-size: 22px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+    /* 한줄에 오고 디자인은 block처럼 적용 */
+    display: inline-block;
+    border: 3px dotted darkcyan;
+    /* 둥근 모서리 - 50% 값 설정시 원 */
+    border-radius: 50%;
 }
 /* dt 순서별 글자색 변경 */
 .secnews dt:first-of-type{
@@ -323,3 +328,59 @@
     :nth-of-type() n번째 자식요소 (n >= 1)
     :last-of-type 마지막 자식요소
 */
+
+/* 사진뉴스 박스  */
+.pnews table{
+    /* 마영오 - 블록요소 또는 테이블 중앙정렬 */
+    margin: 0 auto;
+}
+/* 첫번째 td - 숫자 나오는 부분 */
+.pnews td:first-child{
+    /* 가로크기 w */
+    width: 50px;
+    /* 세로크기 t */
+    height: 70px;
+    /* 배경색 bgc */
+    background-color: #ccc;
+    /* 중앙정렬 tac */
+    text-align: center;
+}
+
+/* 두번째 td - 뉴스제목링크 */
+.pnews td:nth-child(2){
+    /* 배경색 */
+    background-color: #e9e9e9;
+    /* 오른쪽 패딩 */
+    padding-right: 116px;
+    /* 왼쪽 패딩 */
+    padding-left: 20px;
+}
+/* 사진 뉴스 이미지 */
+.pnews img{
+    /* 가로크기 w */
+    width: 151px;
+    /* 세로크기 h */
+    height: 103px;
+    /* td에서 이미지 세로중앙 */
+    vertical-align: middle;
+    /* 
+        원래 vertical-align은 인라인요소간 세로정렬을 세팅하는 속성이다
+        그러나 td에서 이 속성은 td의 세로정렬에 사용할 수 있다
+        여기서는 높이값이 지정되지 않은 상태에서 middle값을 주면
+        아래쪽 빈 공간이 사라진다.
+    */
+}
+/* 사진 뉴스 테이블 설정 */
+.pnews table{
+    /* 테이블 기본간극 bdcoll */
+    /* 
+        값:
+        collapse - 기본간극 없앰
+        seperate - 간극 있음(기본값)
+    */
+    /* border-collapse: collapse; */
+    border-collapse: separate;
+    /* 사이 간격 수치 설정하기
+       주의)seperate 상태에서만 설정 */
+       border-spacing: 7px;
+}
