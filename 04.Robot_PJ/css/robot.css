@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 로봇 PJ CSS - robot.css */
+
+/* 공사중 표시 */
+body *{
+    outline: 2px dashed lime;
+}
+
+/* 초기화 */
+html,body,h1,h2,h3,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+/* 전체배경 */
+body{
+    /* 스크롤확인용 */
+    /* height: 3000px; */
+
+    /* 배경 : 색 이미지 반복 고정 위치/크기 */
+    background: url(../images/bg.jpg) no-repeat fixed top/cover;
+}
+
+/* 공통 클래스 */
+/* 메탈 소재1 배경 */
+.mt1{
+    background: url(../images/metal01.jpg) no-repeat center/cover;
+}
+/* 메탈 소재2 배경 */
+.mt2{
+    background: url(../images/metal02.jpg) no-repeat center/cover;
+}
+ /* 2-1-1. 로봇 머리 */
+ .head{
+    position: relative;
+    /* 부모자격 */
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+ }
+
+ /* 눈공통 */
+.eye{
+    /* 포지션 : 앱솔루트 */
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+
+    /* 배경공통 */
+    /* 배경반복 안함 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+ /* 왼눈  */
+.e1{
+    top: 50px;
+    left: 50px;
+    background-image: url(../images/e1.jpg);
+}
+ /* 오른눈  */
+ .e2{
+    top: 50px;
+    right: 50px;
+    background-image: url(../images/e2.jpg);
+}
+
+/* 코 */
+.nose{
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    width: 50px;
+    height: 70px;
+    background: url(../images/nose.jpg) no-repeat 0/100%
+}
+/* 입 */
+.mouth{
+    position: absolute;
+    top: 180px;
+    left: 75px;
+    width: 100px;
+    height: 70px;
+    background: url(../images/mouth.png) no-repeat 0/100%
+}
