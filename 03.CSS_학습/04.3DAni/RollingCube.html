@@ -2,25 +2,24 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/cube.css">
-    <!-- 외부 JS호출 -->
-    <script src="./js/cube.js"></script>
-    <!--
-        defer키워드로 로딩 후 실행할 수 있으나 외부 js파일 자체에 로딩구역을
-        설정하여 어떤 경우에도 문제 없이 실행되게 하는게 일반적이다
-     -->
     <title>Rolling Cube 3D Animation</title>
+    <!-- 외부CSS호출 -->
+    <link rel="stylesheet" href="./css/cube.css">
+    <!-- 외부JS호출 -->
+    <script src="./js/cube.js"></script>
+    <!-- defer키워드로 로딩후 실행할 수 있으나 외부js파일 자체에
+    로딩구역을 설정하여 어떤경우에도 문제없이 실행되게 하는게
+    일반적이다! -->
 </head>
 <body>
-    
-    <!-- 버튼 박스 -->
+
+    <!-- 버튼박스 -->
     <div class="btns">
         <button>돌아!</button>
     </div>
 
-    <!-- 큐브(정 육면체) -->
+    <!-- 큐브 (정육면체-span 6개) -->
     <div class="cube cube-ani">
         <span></span>
         <span></span>
@@ -29,6 +28,6 @@
         <span></span>
         <span></span>
     </div>
-
+    
 </body>
 </html>
